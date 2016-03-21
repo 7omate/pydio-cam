@@ -89,5 +89,5 @@ if __name__ == "__main__":
 	
 	while True:
 		pydiocamupload()
-		time.sleep(30) # 5 min
+		time.sleep(30) # 30s
 
