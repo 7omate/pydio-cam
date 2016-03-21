@@ -1,0 +1,4 @@
+[submodule "pydiosdk"]
+	path = pydiosdk
+	url = https://github.com/pydio/pydio-sdk-python
+	branch = python2

@@ -1,0 +1,29 @@
+# Based on default Raspberry installed requirements some of these are not necessary
+argh==0.26.1
+colorama==0.3.7
+gpiozero==1.1.0
+humanize==0.5.1
+keyring==8.1.1		# necessary
+keyrings.alt==1.1.1 # necessary
+lxkeymap==0.1
+mcpi==0.1.1
+numpy==1.8.2
+pathtools==0.1.2
+picamera==1.10
+pifacecommon==4.2.1
+pifacedigitalio==3.1.0
+Pillow==2.6.1
+pydispatch==1.1.0
+PyDispatcher==2.0.5
+pygame==1.9.2a0		# necessary
+pygobject==3.14.0
+pyserial==2.6
+PyYAML==3.11
+requests==2.5.0		# necessary version 2.5.0 or 2.5.1 not above
+RPi.GPIO==0.6.1
+RTIMULib==7.2.1
+sense-hat==2.1.0
+six==1.10.0			# necessary
+spidev==3.0
+virtualenv==15.0.1
+watchdog==0.8.3
