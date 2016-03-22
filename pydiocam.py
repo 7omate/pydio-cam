@@ -121,7 +121,7 @@ if __name__ == "__main__":
 	if not sdk.stat(archivepath):
 		sdk.mkdir(archivepath)
 	while True:
-		#pydiocam_snap_and_upload(nextname('image', '.jpg'), '',wcam, sdk)
+		#pydiocam_snap_and_upload(nextname('image', '.jpg'), '', wcam, sdk)
 		filename = "pydiocam-latest.jpg"
 		pydiocam_archive_and_upload(filename, destpath, archivepath, wcam, sdk)
 		time.sleep(30) # in seconds
