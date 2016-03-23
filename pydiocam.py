@@ -98,8 +98,12 @@ def pydiocam_archive_and_upload(filename, destfolder, archivefolder, wcam, sdk):
 	# MV last pic to archive folder
 	lastpicpath = os.path.join(destfolder, filename)
 	if sdk.stat(lastpicpath):
-		print("Archiving " + lastpicpath + " in " + archivefolder)
 		sdk.copy(lastpicpath, archivefolder)
+		# meh, can't copy to name
+		archivename = remotenextname(archivefolder, "image", ".jpg", sdk)
+		print("Archiving " + lastpicpath + " in " + archivefolder + " as " + archivename)
+		res = sdk.rename(archivefolder + "/pydiocam-latest.jpg", archivename) 
+		#print(res)
 	# upload new pic
 	if os.path.exists(filename):
 		os.unlink(filename)
