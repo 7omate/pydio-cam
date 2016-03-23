@@ -98,8 +98,8 @@ def pydiocam_archive_and_upload(filename, destfolder, archivefolder, wcam, sdk):
 	lastpicpath = os.path.join(destfolder, filename)
 	if sdk.stat(lastpicpath):
 		archivename = remotenextname(archivefolder, "image", ".jpg", sdk)
-		print("Archiving " + filename + " as " + archivename) 
-		sdk.rename(lastpicpath, archivename)
+		print("Archiving " + lastpicpath + " as " + archivename) 
+		sdk.copy(lastpicpath, archivename)
 	# upload new pic
 	if os.path.exists(filename):
 		os.unlink(filename)
