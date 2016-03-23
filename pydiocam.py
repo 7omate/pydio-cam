@@ -63,6 +63,7 @@ def nextname(base, extension):
 
 def remotenextname(foldername, base, extension, sdk):
 	""" Lists foldername with sdk, find out what's the next name for archive
+		example usage: archivename = remotenextname(archivefolder, "image", ".jpg", sdk)
 	"""
 	files = sdk.list(foldername)
 	maxnb = -1
@@ -97,8 +98,7 @@ def pydiocam_archive_and_upload(filename, destfolder, archivefolder, wcam, sdk):
 	# MV last pic to archive folder
 	lastpicpath = os.path.join(destfolder, filename)
 	if sdk.stat(lastpicpath):
-		#archivename = remotenextname(archivefolder, "image", ".jpg", sdk)
-		print("Archiving " + lastpicpath + " in " + rchivefolder)
+		print("Archiving " + lastpicpath + " in " + archivefolder)
 		sdk.copy(lastpicpath, archivefolder)
 	# upload new pic
 	if os.path.exists(filename):
